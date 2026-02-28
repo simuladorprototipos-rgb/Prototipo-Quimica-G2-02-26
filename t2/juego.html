@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+        
+    <header>
+        <h1>Elementos Químicos</h1>
+        <p>Clasificación, grupos, periodos y propiedades</p>
+    </header>
+
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="#">Teoría</a>
+        <a href="#">Tabla Interactiva</a>
+        <a href="juego.html">Juego</a>
+    </nav>
+
+    <section class="juego">
+
+    <h2>Identifica el Elemento</h2>
+
+    <div class="elemento-card">
+        <h3 id="nombre">Sodio (Na)</h3>
+        <p>Número Atómico: 11</p>
+    </div>
+
+    <div class="opciones">
+        <label>Grupo:
+            <select id="grupo">
+                <option value="">Selecciona</option>
+                <option value="1">Grupo 1</option>
+                <option value="17">Grupo 17</option>
+                <option value="18">Grupo 18</option>
+            </select>
+        </label>
+
+        <label>Período:
+            <select id="periodo">
+                <option value="">Selecciona</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </label>
+
+        <label>Tipo:
+            <select id="tipo">
+                <option value="">Selecciona</option>
+                <option value="metal">Metal</option>
+                <option value="no metal">No metal</option>
+                <option value="gas noble">Gas noble</option>
+            </select>
+        </label>
+    </div>
+
+    <button onclick="verificar()">Verificar</button>
+
+    <p id="resultado"></p>
+
+</section>
+
+<script src="js/juego.js"></script>
+</body>
+</html>

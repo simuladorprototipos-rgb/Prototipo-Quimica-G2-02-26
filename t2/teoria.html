@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Periódica Interactiva</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Elementos Químicos</h1>
+        <p>Clasificación, grupos, periodos y propiedades</p>
+    </header>
+
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="#">Teoría</a>
+        <a href="#">Tabla Interactiva</a>
+        <a href="juego.html">Juego</a>
+    </nav>
+
+
+<section class="intro">
+    <h2>¿Qué es un elemento químico?</h2>
+    <p>
+        Un elemento químico es una sustancia pura formada por átomos con el mismo número atómico.
+        Se organizan en la tabla periódica según su número atómico, propiedades químicas y configuración electrónica.
+    </p>
+</section>
+
+<section>
+    <h2>Tabla Periódica Interactiva</h2>
+    <div id="tabla" class="tabla-grid"></div>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <div id="infoElemento"></div>
+    </div>
+</div>
+
+<script src="data/elementos.js"></script>
+<script src="js/tabla.js"></script>
+
+</body>
+</html>

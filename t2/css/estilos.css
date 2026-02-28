@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7fb;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    background-color: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+/* MENÚ */
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #1565c0;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #0d47a1;
+}
+
+/* CONTENIDO */
+.contenido {
+    padding: 30px;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* 📱 RESPONSIVE PARA CELULAR */
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .contenido {
+        padding: 15px;
+    }
+}
+
+
+.intro {
+    padding: 20px;
+    text-align: center;
+}
+
+/* TABLA */
+.tabla-grid {
+    display: grid;
+    grid-template-columns: repeat(18, 60px);
+    grid-template-rows: repeat(7, 60px);
+    gap: 4px;
+    justify-content: center;
+}
+
+.elemento {
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.elemento:hover {
+    transform: scale(1.1);
+}
+
+/* COLORES POR TIPO */
+.metal-alcalinoterreo { background: #2196f3; color: white; }
+.metal-alcalino { background: #17ca52; color: white; }
+.no-metal { background: #4caf50; color: white; }
+.metaloide { background: #ffc107; color: black; }
+.gas-noble { background: #9c27b0; color: white; }
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    margin: 10% auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+   .tabla-grid {
+        display: grid;
+        grid-template-columns: repeat(18, 60px);
+        grid-template-rows: repeat(7, 60px);
+        gap: 4px;
+        justify-content: center;
+    }
+}
