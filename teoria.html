@@ -9,41 +9,121 @@
 <body>
 
     <header>
-        <h1>Elementos Químicos</h1>
-        <p>Clasificación, grupos, periodos y propiedades</p>
+        <h1>Teoría: Elementos Químicos y su Clasificación</h1>
+
     </header>
 
     <nav class="menu">
         <a href="index.html">Inicio</a>
         <a href="#">Teoría</a>
-        <a href="#">Tabla Interactiva</a>
+        <a href="tabla.html">Tabla Interactiva</a>
         <a href="juego.html">Juego</a>
     </nav>
 
 
-<section class="intro">
-    <h2>¿Qué es un elemento químico?</h2>
-    <p>
-        Un elemento químico es una sustancia pura formada por átomos con el mismo número atómico.
-        Se organizan en la tabla periódica según su número atómico, propiedades químicas y configuración electrónica.
-    </p>
-</section>
 
-<section>
-    <h2>Tabla Periódica Interactiva</h2>
-    <div id="tabla" class="tabla-grid"></div>
-</section>
+<section class="teoria-container">
 
-<!-- Modal -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="cerrar" onclick="cerrarModal()">&times;</span>
-        <div id="infoElemento"></div>
+    <!-- 1. Definición -->
+    <div class="card">
+        <h2>¿Qué es un elemento químico?</h2>
+        <p>
+            Un elemento químico es una sustancia pura formada por átomos que tienen el mismo número atómico.
+            El número atómico representa la cantidad de protones en el núcleo del átomo.
+        </p>
+        <p>
+            Actualmente se conocen 118 elementos organizados en la tabla periódica.
+        </p>
     </div>
-</div>
 
-<script src="data/elementos.js"></script>
-<script src="js/tabla.js"></script>
+    <!-- 2. Organización -->
+    <div class="card">
+        <h2>Organización de la Tabla Periódica</h2>
+        <ul>
+            <li><strong>Número atómico:</strong> Orden creciente de izquierda a derecha.</li>
+            <li><strong>Grupos:</strong> Columnas verticales (1 al 18).</li>
+            <li><strong>Períodos:</strong> Filas horizontales (1 al 7).</li>
+            <li><strong>Bloques:</strong> s, p, d y f según configuración electrónica.</li>
+        </ul>
+    </div>
+
+    <!-- 3. Clasificación -->
+    <div class="card">
+        <h2>Clasificación de los Elementos</h2>
+
+        <div class="clasificacion-grid">
+            <div class="tipo metal">
+                <center>
+                    <h3>Metales</h3>
+                </center>
+                <p>Son elementos sólidos a temperatura ambiente (excepto el mercurio), densos y muy buenos conductores de calor y electricidad. Generalmente son brillantes, es decir, reflejan la luz. Se clasifican a su vez en actínidos, lantánidos, metales de transición, alcalinos, alcalino-térreos y otros metales.</p>
+            </div>
+
+            <div class="tipo no-metal">
+                <center>
+                    <h3>No Metales</h3>
+                </center>
+                <p>Son elementos que no son buenos conductores de calor ni de electricidad y son demasiado débiles para poder laminarse o estirarse como ocurre con los metales. En su mayoría, son esenciales para los sistemas biológicos (compuestos orgánicos).</p>
+            </div>
+
+            <div class="tipo metaloide">
+                <center>
+                    <h3>Metaloides</h3>
+                </center>
+                <p>Son elementos que corresponden a una clasificación intermedia entre metales y no metales, y que reúnen características de ambos grupos. Se los conoce como semimetales.</p>
+            </div>
+
+            <div class="tipo halogenos">
+                <center>
+                    <h3>Halógenos</h3>
+                </center>
+                <p>Es un grupo de seis elementos que tienden a formar moléculas diatómicas muy activas químicamente, debido a su electronegatividad: suelen formar iones (moléculas cargadas eléctricamente) mononegativos. Los halógenos son altamente oxidantes, por lo que estos elementos suelen ser cáusticos y corrosivos.</p>
+            </div>
+
+            <div class="tipo gas-noble">
+                <center>
+                    <h3>Gases Nobles</h3>
+                </center>
+                <p>Es un grupo de siete elementos cuyo estado natural es el gaseoso. Existen, por lo general, en su forma monoatómica de muy baja reactividad y por eso se los conoce también como gases inertes. Comparten la mayoría de sus propiedades físicas y son sumamente estables.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Grupos importantes -->
+    <div class="card">
+        <h2>Grupos Importantes</h2>
+        <ul>
+            <li><strong>Grupo 1:</strong> Metales alcalinos (muy reactivos).</li>
+            <li><strong>Grupo 2:</strong> Metales alcalinotérreos.</li>
+            <li><strong>Grupo 17:</strong> Halógenos.</li>
+            <li><strong>Grupo 18:</strong> Gases nobles.</li>
+        </ul>
+    </div>
+
+    <!-- 5. Períodos -->
+    <div class="card">
+        <h2>Períodos</h2>
+        <p>
+            Los períodos indican el número de niveles de energía o capas electrónicas
+            que posee un átomo.
+        </p>
+        <p>
+            A medida que se avanza en un período, las propiedades químicas cambian gradualmente.
+        </p>
+    </div>
+
+    <!-- 6. Conexión con el juego -->
+    <div class="card finalizar">
+        <h2>¿Listo para comprobar lo aprendido?</h2>
+        <p>
+            Ahora puedes poner a prueba tus conocimientos identificando grupos,
+            períodos y propiedades en el juego interactivo.
+        </p>
+        <a href="juego.html" class="btn">Ir al Juego</a>
+    </div>
+
+</section>
+
 
 </body>
 </html>
