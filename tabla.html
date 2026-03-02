@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Periódica Interactiva</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Tabla interactiva</h1>
+    </header>
+
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="teoria.html">Teoría</a>
+        <a href="#">Tabla Interactiva</a>
+        <a href="juego.html">Juego</a>
+    </nav>
+
+
+
+
+<section>
+    <center><br>
+        <h2>Tabla Periódica Interactiva</h2>
+    </center><br>
+    <div class="tabla-contenedor">
+        <div id="tabla" class="tabla-grid"></div>
+    </div>
+</section>
+
+<!-- Modal -->
+ <center>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <div id="infoElemento"></div>
+    </div>
+</div>
+</center>
+
+<script src="data/elementos.js"></script>
+<script src="js/tabla.js"></script>
+
+</body>
+</html>
