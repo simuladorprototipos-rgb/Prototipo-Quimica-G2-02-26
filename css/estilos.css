@@ -177,6 +177,219 @@ footer {
 .finalizar {
     text-align: center;
 }
+
+
+
+/*Juego */
+
+
+
+
+/* ================= JUEGO ================= */
+
+
+.juego-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* SOLO para juego.html */
+/* IGUALAR TAMAÑO SOLO EN juego.html */
+#contenedorTrivia,
+#contenedorMemorama {
+    width: 700px;
+    height: 160px;
+
+}
+
+.pantalla-inicio,
+.pantalla-juego {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.btn-principal {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1565c0, #42a5f5);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    transform: scale(1.05);
+}
+
+.opciones button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e3f2fd;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.opciones button:hover {
+    background-color: #bbdefb;
+}
+
+.correcta {
+    background-color: #4caf50 !important;
+    color: white;
+    animation: animCorrecta 0.4s ease;
+}
+
+.incorrecta {
+    background-color: #e53935 !important;
+    color: white;
+    animation: animIncorrecta 0.4s ease;
+}
+
+@keyframes animCorrecta {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+@keyframes animIncorrecta {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Barra de progreso */
+
+.barra-contenedor {
+    width: 100%;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.barra-progreso {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #42a5f5, #1565c0);
+    transition: width 0.4s ease;
+}
+
+.contador {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.oculto {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/*memorama*/
+
+
+/* =============================
+   MEMORAMA
+============================= */
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(5, 120px); /* tamaño fijo */
+    gap: 15px;
+    justify-content: center; /* centra el grid */
+    margin: 30px auto;
+    max-width: 900px; /* evita que se desborde */
+}
+
+
+
+
+/* =============================
+   CARTA
+============================= */
+
+.carta {
+    width: 120px;        /* tamaño fijo */
+    height: 150px;       /* tamaño fijo */
+    background: #e3f2fd;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.2s ease, background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden; /* evita que el contenido la agrande */
+    padding: 10px;
+}
+
+/* Contenido interno */
+.carta-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Grupo y periodo debajo */
+.grupo-periodo {
+    font-size: 12px;
+    margin-top: 4px;
+    line-height: 1.3;
+}
+
+/* Hover solo en desktop */
+@media (min-width: 769px) {
+    .carta:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* =============================
+   ESTADOS
+============================= */
+
+.carta.volteada {
+    background: white;
+}
+
+.carta.correcta {
+    background-color: #4caf50 !important;
+    color: white;
+    transform: scale(1); /* evita que se agranden */
+}
+
+.carta.incorrecta {
+    background-color: #e53935 !important;
+    color: white;
+}
+
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
@@ -202,6 +415,33 @@ footer {
         padding: 15px;
     }
 
+    .juego-container {
+        padding: 10px;
+    }
+
+    .pantalla-inicio,
+    .pantalla-juego {
+        padding: 18px;
+    }
+
+    .opciones button {
+        font-size: 14px;
+    }
+  
+
+    .tablero {
+        grid-template-columns: repeat(2, 120px);
+    }
+
+    .carta {
+        width: 110px;
+        height: 140px;
+        font-size: 14px;
+    }
+
+    .grupo-periodo {
+        font-size: 11px;
+    }
    
   
 }
