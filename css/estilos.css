@@ -180,6 +180,8 @@ footer {
 
 
 
+
+
 /*Juego */
 
 
@@ -187,21 +189,17 @@ footer {
 
 /* ================= JUEGO ================= */
 
-
 .juego-container {
-    max-width: 500px;
-    margin: 20px auto;
+    width: 100%;
+    max-width: 750px;          /* MISMO tamaño para trivia y memorama */
+    margin: 30px auto;
     padding: 20px;
 }
 
-/* SOLO para juego.html */
-/* IGUALAR TAMAÑO SOLO EN juego.html */
-#contenedorTrivia,
-#contenedorMemorama {
-    width: 700px;
-    height: 160px;
+/* Eliminamos tamaños fijos que rompían el diseño */
+/* BORRAR cualquier width/height fijo anterior */
 
-}
+/* ================= PANTALLAS ================= */
 
 .pantalla-inicio,
 .pantalla-juego {
@@ -211,6 +209,8 @@ footer {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     text-align: center;
 }
+
+/* ================= BOTONES ================= */
 
 .btn-principal {
     padding: 12px 20px;
@@ -227,22 +227,26 @@ footer {
     transform: scale(1.05);
 }
 
+/* ================= OPCIONES TRIVIA ================= */
+
 .opciones button {
     display: block;
     width: 100%;
     margin: 10px 0;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #e3f2fd;
-    cursor: pointer;
-    transition: 0.3s;
+    pransition: 0.3s;
     font-size: 15px;
 }
 
 .opciones button:hover {
     background-color: #bbdefb;
 }
+
+/* ==adding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e3f2fd;
+    cursor: pointer;
+    t=============== ESTADOS ================= */
 
 .correcta {
     background-color: #4caf50 !important;
@@ -270,7 +274,7 @@ footer {
     100% { transform: translateX(0); }
 }
 
-/* Barra de progreso */
+/* ================= BARRA PROGRESO ================= */
 
 .barra-contenedor {
     width: 100%;
@@ -298,40 +302,23 @@ footer {
     display: none;
 }
 
-
-
-
-
-
-
-
-
-/*memorama*/
-
-
-/* =============================
-   MEMORAMA
-============================= */
+/* ============================= */
+/* MEMORAMA */
+/* ============================= */
 
 .tablero {
     display: grid;
-    grid-template-columns: repeat(5, 120px); /* tamaño fijo */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 15px;
-    justify-content: center; /* centra el grid */
     margin: 30px auto;
-    max-width: 900px; /* evita que se desborde */
+    width: 100%;
 }
 
-
-
-
-/* =============================
-   CARTA
-============================= */
+/* ================= CARTA ================= */
 
 .carta {
-    width: 120px;        /* tamaño fijo */
-    height: 150px;       /* tamaño fijo */
+    width: 100%;
+    aspect-ratio: 4 / 5;   /* mantiene proporción adaptable */
     background: #e3f2fd;
     border-radius: 12px;
     display: flex;
@@ -342,7 +329,7 @@ footer {
     font-weight: 500;
     transition: transform 0.2s ease, background 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    overflow: hidden; /* evita que el contenido la agrande */
+    overflow: hidden;
     padding: 10px;
 }
 
@@ -357,7 +344,6 @@ footer {
     width: 100%;
 }
 
-/* Grupo y periodo debajo */
 .grupo-periodo {
     font-size: 12px;
     margin-top: 4px;
@@ -371,9 +357,7 @@ footer {
     }
 }
 
-/* =============================
-   ESTADOS
-============================= */
+/* Estados memorama */
 
 .carta.volteada {
     background: white;
@@ -382,7 +366,6 @@ footer {
 .carta.correcta {
     background-color: #4caf50 !important;
     color: white;
-    transform: scale(1); /* evita que se agranden */
 }
 
 .carta.incorrecta {
@@ -415,9 +398,6 @@ footer {
         padding: 15px;
     }
 
-    .juego-container {
-        padding: 10px;
-    }
 
     .pantalla-inicio,
     .pantalla-juego {
@@ -427,21 +407,26 @@ footer {
     .opciones button {
         font-size: 14px;
     }
-  
+      /*--------------*/
+     /*Para memorama */
+    /*---------- ---*/
+   .juego-container {
+        max-width: 95%;
+        padding: 15px;
+    }
 
     .tablero {
-        grid-template-columns: repeat(2, 120px);
+        grid-template-columns: repeat(2, 120px); /* ancho fijo */
+        justify-content: center;               /* centra columnas */
     }
 
     .carta {
-        width: 110px;
-        height: 140px;
-        font-size: 14px;
+        aspect-ratio: 4 / 5;
     }
 
     .grupo-periodo {
         font-size: 11px;
     }
-   
+  
   
 }
