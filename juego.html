@@ -22,50 +22,56 @@
 
 <section class="juego">
 
-<div class="juego-container" id="contenedorTrivia">
+    <!-- ================= TRIVIA ================= -->
 
-    <div class="pantalla-inicio" id="pantallaInicio">
-        <h2>Trivia</h2><br>
-        <button class="btn-principal" onclick="iniciarJuego()">Comenzar</button>
-    </div>
+    <div class="juego-container" id="contenedorTrivia">
 
-    <div class="pantalla-juego oculto" id="pantallaJuego">
-
-        <div class="barra-contenedor">
-            <div class="barra-progreso" id="barraProgreso"></div>
+        <div class="pantalla-inicio" id="pantallaInicio">
+            <h2>Trivia</h2><br>
+            <button class="btn-principal" onclick="iniciarJuego()">Comenzar</button>
         </div>
 
-        <p class="contador" id="contador"></p>
+        <div class="pantalla-juego oculto" id="pantallaJuego">
 
-        <h3 id="pregunta"></h3>
+            <div class="barra-contenedor">
+                <div class="barra-progreso" id="barraProgreso"></div>
+            </div>
 
-        <div id="opciones" class="opciones"></div>
+            <p class="contador" id="contador"></p>
+
+            <h3 id="pregunta"></h3>
+
+            <div id="opciones" class="opciones"></div>
+
+        </div>
 
     </div>
 
-</div>
+    <!-- ================= MEMORAMA ================= -->
 
-<div class="juego-container" id="contenedorMemorama">
+    <div class="juego-container" id="contenedorMemorama">
 
-    <div class="pantalla-inicio" id="inicioMemorama">
-        <h2>Memorama Químico</h2><br>
-        <button class="btn-principal" onclick="iniciarMemorama()">Comenzar</button>
+        <div class="pantalla-inicio" id="inicioMemorama">
+            <h2>Memorama Químico</h2><br>
+            <button class="btn-principal" onclick="iniciarMemorama()">Comenzar</button>
+        </div>
+
+        <div class="pantalla-juego oculto" id="juegoMemorama">
+            <div id="tablero" class="tablero"></div>
+
+            <!-- Contenedor para mensaje final -->
+            <div id="mensajeFinalMemorama"></div>
+        </div>
+
     </div>
-
-    <div class="pantalla-juego oculto" id="juegoMemorama">
-        <div id="tablero" class="tablero"></div>
-    </div>
-
-</div>
-
-<script src="data/elementos.js"></script>
-<script src="js/memorama.js"></script>
 
 </section>
 
-<!-- SCRIPTS -->
+<!-- ================= SCRIPTS ================= -->
+
 <script src="data/elementos.js"></script>
 <script src="js/juego.js"></script>
+<script src="js/memorama.js"></script>
 
 </body>
 </html>
