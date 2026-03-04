@@ -7,6 +7,7 @@ let primeraCarta = null;
 let segundaCarta = null;
 let bloqueo = false;
 let parejasEncontradas = 0;
+const totalParejas = 10;
 
 
 // =============================
@@ -15,11 +16,12 @@ let parejasEncontradas = 0;
 
 function iniciarMemorama() {
 
-    // Ocultar trivia
     document.getElementById("contenedorTrivia").style.display = "none";
 
     document.getElementById("inicioMemorama").classList.add("oculto");
     document.getElementById("juegoMemorama").classList.remove("oculto");
+
+    document.getElementById("mensajeFinalMemorama").innerHTML = "";
 
     crearTablero();
 }
@@ -39,19 +41,15 @@ function crearTablero() {
     segundaCarta = null;
     bloqueo = false;
 
-    // Mezclar elementos
     let copia = [...elementos];
     copia.sort(() => Math.random() - 0.5);
 
-    // Tomar 5 elementos
-    let seleccionados = copia.slice(0, 10);
+    let seleccionados = copia.slice(0, totalParejas);
 
     cartasMemorama = [];
 
-    // Crear parejas (símbolo + nombre)
     seleccionados.forEach(elemento => {
 
-        // Carta símbolo
         cartasMemorama.push({
             id: elemento.numero,
             contenido: `
@@ -65,7 +63,6 @@ function crearTablero() {
             `
         });
 
-        // Carta nombre
         cartasMemorama.push({
             id: elemento.numero,
             contenido: `
@@ -77,17 +74,14 @@ function crearTablero() {
 
     });
 
-    // Mezclar cartas
     cartasMemorama.sort(() => Math.random() - 0.5);
 
-    // Crear en el DOM
     cartasMemorama.forEach(carta => {
 
         const div = document.createElement("div");
         div.classList.add("carta");
         div.dataset.id = carta.id;
         div.dataset.contenido = carta.contenido;
-
         div.innerHTML = "?";
 
         div.addEventListener("click", voltearCarta);
@@ -134,13 +128,23 @@ function verificarPareja() {
         segundaCarta.classList.add("correcta");
 
         parejasEncontradas++;
-
         reiniciarTurno();
 
-        if (parejasEncontradas === 10) {
+        if (parejasEncontradas === totalParejas) {
+
             setTimeout(() => {
-                alert("¡Felicidades! Completaste el memorama 🏆");
-            }, 500);
+
+                document.getElementById("mensajeFinalMemorama").innerHTML = `
+                    <div style="text-align:center;">
+                        <h2>🎉 ¡Felicidades!</h2>
+                        <p>Completaste el memorama correctamente</p><br>
+                        <button class="btn-principal" onclick="iniciarMemorama()">Volver a jugar</button>
+                        <br><br>
+                        <a href="juego.html" class="btn">Ver más juegos</a>
+                    </div>
+                `;
+
+            }, 600);
         }
 
     } else {
