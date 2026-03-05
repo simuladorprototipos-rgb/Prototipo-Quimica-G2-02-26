@@ -65,13 +65,81 @@
 
     </div>
 
+
+    <!-- ================= CLASIFICACIÓN ================= -->
+
+<div class="juego-container" id="contenedorClasificacion">
+
+    <div class="pantalla-inicio" id="inicioClasificacion">
+        <h2>Clasifica el Elemento</h2><br>
+        <button class="btn-principal" onclick="iniciarClasificacion()">Comenzar</button>
+    </div>
+
+    <div class="pantalla-juego oculto" id="juegoClasificacion">
+
+        <div id="elementosArrastrables" class="zona-elementos"></div>
+
+       <div class="zonas-clasificacion">
+
+    <div class="zona" data-tipo="metal-alcalino">
+        <h3>Metal Alcalino</h3>
+    </div>
+
+    <div class="zona" data-tipo="metal-alcalinoterreo">
+        <h3>Metal Alcalinotérreo</h3>
+    </div>
+
+    <div class="zona" data-tipo="metal-transicion">
+        <h3>Metal de transición</h3>
+    </div>
+
+    <div class="zona" data-tipo="metal">
+        <h3>Otros metales</h3>
+    </div>
+
+    <div class="zona" data-tipo="metaloide">
+        <h3>Metaloides</h3>
+    </div>
+
+    <div class="zona" data-tipo="no-metal">
+        <h3>No metales</h3>
+    </div>
+
+    <div class="zona" data-tipo="halogeno">
+        <h3>Halógenoss</h3>
+    </div>
+
+    <div class="zona" data-tipo="gas-noble">
+        <h3>Gases nobles</h3>
+    </div>
+
+    <div class="zona" data-tipo="lantanidos">
+        <h3>Lantánidos</h3>
+    </div>
+
+    <div class="zona" data-tipo="actinidos">
+        <h3>Actínidos</h3>
+    </div>
+
+</div>
+
+        <div id="resultadoClasificacion"></div>
+
+    </div>
+
+</div>
+
 </section>
+
+
+
 
 <!-- ================= SCRIPTS ================= -->
 
 <script src="data/elementos.js"></script>
 <script src="js/juego.js"></script>
 <script src="js/memorama.js"></script>
+<script src="js/clasificacion.js"></script>
 
 </body>
 </html>
