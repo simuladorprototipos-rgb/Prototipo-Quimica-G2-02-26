@@ -1,39 +1,4 @@
 const elementos = [
-    /*
-    {
-        numero: 1,
-        simbolo: "H",
-        nombre: "Hidrógeno",
-        grupo: 1,
-        periodo: 1,
-        masa: 1.008,
-        tipo: "no-metal"
-    },
-    {
-        numero: 2,
-        simbolo: "He",
-        nombre: "Helio",
-        grupo: 18,
-        periodo: 1,
-        tipo: "gas-noble"
-    },
-    {
-        numero: 3,
-        simbolo: "Li",
-        nombre: "Litio",
-        grupo: 1,
-        periodo: 2,
-        tipo: "metal-alcalino"
-    },
-    {
-        numero: 4,
-        simbolo: "Be",
-        nombre: "Berilio",
-        grupo: 2,
-        periodo: 2,
-        tipo: "metal-alcalinoterreo",
-
-    },
 
 
 
@@ -41,48 +6,7 @@ const elementos = [
 
 
 
-
-    {
-        numero: 11,
-        simbolo: "Na",
-        nombre: "Sodio",
-        grupo: 1,
-        periodo: 3,
-        tipo: "metal-alcalino"
-    },
-    {
-        numero: 19,
-        simbolo: "K",
-        nombre: "Potasio",
-        grupo: 1,
-        periodo: 4,
-        tipo: "metal-alcalino"
-    },
-    {
-        numero: 37,
-        simbolo: "Rb",
-        nombre: "Rubidio",
-        grupo: 1,
-        periodo: 5,
-        tipo: "metal-alcalino"
-    },
-    {
-        numero: 55,
-        simbolo: "Cs",
-        nombre: "Cesio",
-        grupo: 1,
-        periodo: 6,
-        tipo: "metal-alcalino"
-    },
-    {
-        numero: 87,
-        simbolo: "Fr",
-        nombre: "Francio",
-        grupo: 1,
-        periodo: 7,
-        tipo: "metal-alcalino"
-    },
-/**/ 
+/*Omar*/
 
 {
         numero: 1,
@@ -91,7 +15,7 @@ const elementos = [
         grupo: 1,
         periodo: 1,
         masa: 1.008,
-        tipo: "no-metal"
+        tipo: "halogenos"
     },
     {
         numero: 3,
@@ -367,47 +291,7 @@ const elementos = [
 },
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*Dario*/
 
 {
     numero: 26,
@@ -461,7 +345,7 @@ const elementos = [
     grupo: 13,
     periodo: 4,
     masa: 69.723,
-    tipo: "metal"
+    tipo: "otros-metales"
 },
 {
     numero: 32,
@@ -533,7 +417,7 @@ const elementos = [
     grupo: 13,
     periodo: 5,
     masa: 114.82,
-    tipo: "metal"
+    tipo: "otros-metales"
 },
 {
     numero: 50,
@@ -542,7 +426,7 @@ const elementos = [
     grupo: 14,
     periodo: 5,
     masa: 118.71,
-    tipo: "metal"
+    tipo: "otros-metales"
 },
 {
     numero: 51,
@@ -596,7 +480,7 @@ const elementos = [
     grupo: 12,
     periodo: 6,
     masa: 200.59,
-    tipo: "metal"
+    tipo: "metal-transicion"
 },
 {
     numero: 81,
@@ -605,7 +489,7 @@ const elementos = [
     grupo: 13,
     periodo: 6,
     masa: 204.38,
-    tipo: "metal"
+    tipo: "otros-metales"
 },
 {
     numero: 82,
@@ -614,7 +498,7 @@ const elementos = [
     grupo: 14,
     periodo: 6,
     masa: 207.2,
-    tipo: "metal"
+    tipo: "otros-metales"
 },
 {
     numero: 83,
@@ -623,7 +507,7 @@ const elementos = [
     grupo: 15,
     periodo: 6,
     masa: 208.98,
-    tipo: "metal"
+    tipo: "otros-metales"
 },
 {
     numero: 104,
@@ -704,7 +588,7 @@ const elementos = [
     grupo: 12,
     periodo: 7,
     masa: 285,
-    tipo: "metal"
+    tipo: "metal-transicion"
 },
 {
     numero: 113,
@@ -713,7 +597,7 @@ const elementos = [
     grupo: 13,
     periodo: 7,
     masa: 286,
-    tipo: "metal"
+    tipo: "otros-metales"
 },
 {
     numero: 114,
@@ -722,7 +606,7 @@ const elementos = [
     grupo: 14,
     periodo: 7,
     masa: 289,
-    tipo: "metal"
+    tipo: "otros-metales"
 },
 {
     numero: 115,
@@ -731,7 +615,7 @@ const elementos = [
     grupo: 15,
     periodo: 7,
     masa: 290,
-    tipo: "metal"
+    tipo: "otros-metales"
 },
 
 
@@ -792,7 +676,7 @@ const elementos = [
         nombre: "Lantano",
         grupo: 4,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
     {
         numero: 58,
@@ -800,7 +684,7 @@ const elementos = [
         nombre: "Cerio",
         grupo: 5,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
     {
         numero: 59,
@@ -808,7 +692,7 @@ const elementos = [
         nombre: "Praseodimio",
         grupo: 6,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
         {
         numero: 60,
@@ -816,7 +700,7 @@ const elementos = [
         nombre: "Neodimio",
         grupo: 7,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
     {
         numero: 61,
@@ -824,7 +708,7 @@ const elementos = [
         nombre: "Prometio",
         grupo: 8,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
     {
         numero: 62,
@@ -832,7 +716,7 @@ const elementos = [
         nombre: "Samario",
         grupo: 9,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
         {
         numero: 63,
@@ -840,7 +724,7 @@ const elementos = [
         nombre: "Europio",
         grupo: 10,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
     {
         numero: 64,
@@ -848,7 +732,7 @@ const elementos = [
         nombre: "Gadolinio",
         grupo: 11,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
     {
         numero: 65,
@@ -856,7 +740,7 @@ const elementos = [
         nombre: "Terbio",
         grupo: 12,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
     {
         numero: 66,
@@ -864,7 +748,7 @@ const elementos = [
         nombre: "Disprosio",
         grupo: 13,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
     {
         numero: 67,
@@ -872,7 +756,7 @@ const elementos = [
         nombre: "Holmio",
         grupo: 14,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
     {
         numero: 68,
@@ -880,7 +764,7 @@ const elementos = [
         nombre: "Ersio",
         grupo: 15,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
         {
         numero: 69,
@@ -888,7 +772,7 @@ const elementos = [
         nombre: "Tulio",
         grupo: 16,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
     {
         numero: 70,
@@ -896,7 +780,7 @@ const elementos = [
         nombre: "Iterbio",
         grupo: 17,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
     {
         numero: 71,
@@ -904,7 +788,7 @@ const elementos = [
         nombre: "Lutecio",
         grupo: 18,
         periodo: 6,
-        tipo: "lactanidos"
+        tipo: "lantanidos"
     },
     {
         numero: 89,
