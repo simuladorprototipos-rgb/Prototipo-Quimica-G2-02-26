@@ -92,6 +92,126 @@ elementos.forEach(elemento => {
 
 /* INDICADORES */
 
+    const ma = document.createElement("div");
+    ma.innerHTML = "Metales <br> Alcalinos";
+    ma.style.gridColumn = 5;
+    ma.style.gridRow = 2;
+    ma.style.background = "#28b457";
+    ma.style.color = "white";
+    ma.style.textAlign = "center";
+    ma.style.fontSize = "15px",
+    ma.style.fontWeight = "bold";
+    ma.style.padding = "5px";
+    tabla.appendChild(ma);
+
+
+    const mat = document.createElement("div");
+    mat.innerHTML = "Metales <br> Alcalino-<br>térreos";
+    mat.style.gridColumn = 6;
+    mat.style.gridRow = 2;
+    mat.style.background = "#097727";
+    mat.style.color = "white";
+    mat.style.textAlign = "center";
+    mat.style.fontSize = "15px",
+    mat.style.fontWeight = "bold";
+    mat.style.padding = "5px";
+    tabla.appendChild(mat);
+
+
+    const ot = document.createElement("div");
+    ot.innerHTML = "Otros <br> metales";
+    ot.style.gridColumn = 7;
+    ot.style.gridRow = 2;
+    ot.style.background = "#754399";
+    ot.style.color = "white";
+    ot.style.textAlign = "center";
+    ot.style.fontSize = "15px",
+    ot.style.fontWeight = "bold";
+    ot.style.padding = "5px";
+    tabla.appendChild(ot);
+
+    const mt = document.createElement("div");
+    mt.innerHTML = "Metales <br> transición";
+    mt.style.gridColumn = 8;
+    mt.style.gridRow = 2;
+    mt.style.background = "#454399";
+    mt.style.color = "white";
+    mt.style.textAlign = "center";
+    mt.style.fontSize = "15px",
+    mt.style.fontWeight = "bold";
+    mt.style.padding = "5px";
+    tabla.appendChild(mt);
+
+    const lat = document.createElement("div");
+    lat.innerHTML = "Lantá-<br>nidos";
+    lat.style.gridColumn = 9;
+    lat.style.gridRow = 2;
+    lat.style.background = "#4ccdbe";
+    lat.style.color = "black";
+    lat.style.textAlign = "center";
+    lat.style.fontSize = "15px",
+    lat.style.fontWeight = "bold";
+    lat.style.padding = "5px";
+    tabla.appendChild(lat);
+
+    const ac = document.createElement("div");
+    ac.innerHTML = "Actínidos";
+    ac.style.gridColumn = 10;
+    ac.style.gridRow = 2;
+    ac.style.background = "#1976d2";
+    ac.style.color = "white";
+    ac.style.textAlign = "center";
+    ac.style.fontSize = "15px",
+    ac.style.fontWeight = "bold";
+    ac.style.padding = "5px";
+    tabla.appendChild(ac);
+
+   const mtl = document.createElement("div");
+    mtl.innerHTML = "Meta-<br>loides";
+    mtl.style.gridColumn = 12;
+    mtl.style.gridRow = 2;
+    mtl.style.background = "#dc733a";
+    mtl.style.color = "white";
+    mtl.style.textAlign = "center";
+    mtl.style.fontSize = "15px",
+    mtl.style.fontWeight = "bold";
+    mtl.style.padding = "5px";
+    tabla.appendChild(mtl);
+
+    const ha = document.createElement("div");
+    ha.innerHTML = "Haló-<br>genos";
+    ha.style.gridColumn = 11;
+    ha.style.gridRow = 2;
+    ha.style.background = "rgb(181, 46, 143)";
+    ha.style.color = "white";
+    ha.style.textAlign = "center";
+    ha.style.fontSize = "15px",
+    ha.style.fontWeight = "bold";
+    ha.style.padding = "5px";
+    tabla.appendChild(ha);
+
+
+    
+    const gn = document.createElement("div");
+    gn.innerHTML = "Gases <br>nobles";
+    gn.style.gridColumn = 10;
+    gn.style.gridRow = 3;
+    gn.style.background = "#c66d9f";
+    gn.style.color = "white";
+    gn.style.textAlign = "center";
+    gn.style.fontSize = "15px",
+    gn.style.fontWeight = "bold";
+    gn.style.padding = "5px";
+    tabla.appendChild(gn);
+
+
+
+
+
+
+
+
+
     const lan = document.createElement("div");
     lan.innerHTML = "La–Lu";
     lan.style.gridColumn = 4;
@@ -126,5 +246,3 @@ function mostrarInfo(elemento) {
 function cerrarModal() {
     document.getElementById("modal").style.display = "none";
 }
-
-
