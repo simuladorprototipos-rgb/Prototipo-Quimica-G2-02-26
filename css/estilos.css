@@ -93,15 +93,28 @@ footer {
 }
 
 /* COLORES POR TIPO */
+/*Parar teoria*/
 .metal{ background: green; color: white;}
-.metal-alcalinoterreo { background: #17ad3f; color: white; }
-.metal-alcalino { background: #67d98d; color: white; }
 .no-metal { background: #4caf50; color: white; }
-.metaloide { background: #ffc107; color: black; }
-.gas-noble { background: #b05e8d; color: white; }
-.lactanidos{ background: #4ccdbe; color: black;}
+.metaloide { background: #dc733a; color: rgb(255, 255, 255); }
+
+
+
+
+
+/*Para la tabla*/
+
+.metal-alcalino { background: #28b457; color: white; }
+.metal-alcalinoterreo { background: #097727; color: white; }
+/*semimetales { background: #13b83f; color: white; }*/
+.otros-metales{ background: #754399; color: white;}
+.metal-transicion{ background: #454399; color: white;}
+.lantanidos{ background: #4ccdbe; color: black;}
 .actinidos{ background: #1976d2; color: white;}
-.halogenos{ background: rgb(200, 150, 89); color: black;}
+/*metaloides { background: #13b83f; color: white; }*/
+.halogenos{ background: rgb(181, 46, 143); color: rgb(255, 255, 255);}
+.gas-noble { background: #c66d9f; color: white; }
+
 
 /* MODAL */
 .modal {
@@ -180,8 +193,6 @@ footer {
 
 
 
-
-
 /*Juego */
 
 
@@ -233,7 +244,12 @@ footer {
     display: block;
     width: 100%;
     margin: 10px 0;
-    pransition: 0.3s;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e3f2fd;
+    cursor: pointer;
+    transition: 0.3s;
     font-size: 15px;
 }
 
@@ -241,12 +257,7 @@ footer {
     background-color: #bbdefb;
 }
 
-/* ==adding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #e3f2fd;
-    cursor: pointer;
-    t=============== ESTADOS ================= */
+/* ================= ESTADOS ================= */
 
 .correcta {
     background-color: #4caf50 !important;
@@ -373,6 +384,94 @@ footer {
     color: white;
 }
 
+
+/*Arrastrar*/
+
+
+
+/* ============================= */
+/* CLASIFICACIÓN */
+/* ============================= */
+
+.zona-elementos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.elemento-draggable{
+    width:95px;
+    min-height:75px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:6px;
+
+    background:#2f8c79;
+    color:white;
+
+    border-radius:10px;
+
+    font-size:14px;
+    text-align:center;
+
+    cursor:grab;
+
+    box-shadow:0 3px 8px rgba(0,0,0,0.2);
+}
+
+.zonas-clasificacion{
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+}
+
+.zona {
+
+    min-height: 120px;
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: flex-start;
+
+    border: 2px dashed #999;
+    border-radius: 10px;
+}
+
+.zona.correcta-zona {
+    background: #c8e6c9;
+    border-color: #4caf50;
+}
+
+.zona.incorrecta-zona {
+    background: #ffcdd2;
+    border-color: #e53935;
+}
+
+.elemento-correcto {
+    background: #cfcfcf;
+    color: #333;
+    border: 2px solid #999;
+    cursor: default;
+    opacity: 0.8;
+}
+
+
+
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
@@ -428,5 +527,45 @@ footer {
         font-size: 11px;
     }
   
+
+#juegoClasificacion{
+    padding:10px;
+}
+
+
+/* ELEMENTOS ARRASTRABLES */
+
+#elementosArrastrables{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+
+/* TARJETAS DE ELEMENTOS */
+
+
+
+
+/* ZONAS */
+
+.zonas-clasificacion{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-top:20px;
+}
+
+.zona{
+    min-height:90px;
+    padding:8px;
+
+    border:2px dashed #999;
+    border-radius:10px;
+
+    text-align:center;
+    font-size:13px;
+}
   
 }
