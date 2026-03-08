@@ -1,239 +1,240 @@
-let elementosClasificacion = [];
-let aciertos = 0;
-let elementoSeleccionado = null;
+// =============================
+// VARIABLES DEL JUEGO
+// =============================
+
+let preguntasSeleccionadas = [];
+let preguntaActual = 0;
+let puntaje = 0;
 
 
 // =============================
-// INICIAR CLASIFICACIÓN
+// INICIAR JUEGO
 // =============================
 
-function iniciarClasificacion() {
+function iniciarJuego() {
 
-    document.getElementById("contenedorTrivia").style.display = "none";
-    document.getElementById("contenedorMemorama").style.display = "none";
+  // Ocultar otros juegos
+  const memorama = document.getElementById("contenedorMemorama");
+  if (memorama) memorama.style.display = "none";
 
-    document.getElementById("inicioClasificacion").classList.add("oculto");
-    document.getElementById("juegoClasificacion").classList.remove("oculto");
+  const clasificacion = document.getElementById("juegoClasificacion");
+  if (clasificacion) clasificacion.style.display = "none";
 
-    generarElementosClasificacion();
+  document.getElementById("pantallaInicio").classList.add("oculto");
+  document.getElementById("pantallaJuego").classList.remove("oculto");
+
+  if (elementos.length < 10) {
+    alert("Debes agregar más elementos para jugar.");
+    return;
+  }
+
+  puntaje = 0;
+  preguntaActual = 0;
+
+  let copia = [...elementos];
+  copia.sort(() => Math.random() - 0.5);
+
+  preguntasSeleccionadas = copia.slice(0, 10);
+
+  mostrarPregunta();
 }
 
 
 // =============================
-// GENERAR ELEMENTOS
+// GENERAR PREGUNTA DINÁMICA
 // =============================
 
-function generarElementosClasificacion() {
+function generarPregunta(elemento) {
 
-    limpiarZonas();
+  const tipoPregunta = Math.floor(Math.random() * 3);
 
-    const contenedor = document.getElementById("elementosArrastrables");
-    contenedor.innerHTML = "";
-    document.getElementById("resultadoClasificacion").innerHTML = "";
+  if (tipoPregunta === 0) {
+    return {
+      texto: `¿A qué grupo pertenece ${elemento.nombre} (${elemento.simbolo})?`,
+      correcta: elemento.grupo,
+      opciones: generarOpcionesNumericas(elemento.grupo, 18)
+    };
+  }
 
-    aciertos = 0;
+  if (tipoPregunta === 1) {
+    return {
+      texto: `¿En qué período se encuentra ${elemento.nombre} (${elemento.simbolo})?`,
+      correcta: elemento.periodo,
+      opciones: generarOpcionesNumericas(elemento.periodo, 7)
+    };
+  }
 
-    let copia = [...elementos];
-    copia.sort(() => Math.random() - 0.5);
-
-    elementosClasificacion = copia.slice(0, 8);
-
-    elementosClasificacion.forEach(el => {
-
-        let div = document.createElement("div");
-        div.classList.add("elemento-draggable");
-        div.draggable = true;
-
-        div.innerHTML = `
-            <strong>${el.simbolo}</strong><br>
-            <small>${el.nombre}</small>
-        `;
-
-        div.dataset.tipo = el.tipo;
-
-        div.addEventListener("dragstart", e => {
-            e.dataTransfer.setData("tipo", div.dataset.tipo);
-            div.style.opacity = "0.5";
-        });
-
-        div.addEventListener("dragend", () => {
-            div.style.opacity = "1";
-        });
-
-        contenedor.appendChild(div);
-    });
-
-    activarZonas();
+  return {
+    texto: `¿Qué tipo de elemento es ${elemento.nombre} (${elemento.simbolo})?`,
+    correcta: elemento.tipo,
+    opciones: generarOpcionesTipo(elemento.tipo)
+  };
 }
 
 
 // =============================
-// ACTIVAR ZONAS
+// GENERAR OPCIONES NUMÉRICAS
 // =============================
 
-function activarZonas() {
+function generarOpcionesNumericas(correcta, max) {
 
-    const zonas = document.querySelectorAll(".zona");
+  let opciones = [correcta];
 
-    zonas.forEach(zona => {
-
-        zona.ondrop = null;
-        zona.ondragover = null;
-
-        zona.addEventListener("dragover", e => e.preventDefault());
-
-        zona.addEventListener("drop", e => {
-
-            e.preventDefault();
-
-            const tipoArrastrado = e.dataTransfer.getData("tipo");
-            const elementoHTML = document.querySelector('[draggable="true"][style*="opacity: 0.5"]');
-
-            if (!elementoHTML) return;
-
-            if (zona.dataset.tipo === tipoArrastrado) {
-
-                elementoHTML.classList.add("elemento-correcto");
-                elementoHTML.draggable = false;
-
-                zona.appendChild(elementoHTML);
-
-                aciertos++;
-
-                if (aciertos === elementosClasificacion.length) {
-                    mostrarResultadoClasificacion();
-                }
-
-            } else {
-
-                zona.classList.add("incorrecta-zona");
-
-                setTimeout(() => {
-                    zona.classList.remove("incorrecta-zona");
-                }, 600);
-            }
-
-        });
-
-    });
-}
-
-
-// =============================
-// RESULTADO
-// =============================
-
-function mostrarResultadoClasificacion() {
-
-    document.getElementById("resultadoClasificacion").innerHTML = `
-        <h2>🎉 ¡Excelente!</h2>
-        <p>Clasificaste todos correctamente</p><br>
-        <button class="btn-principal" onclick="reiniciarClasificacion()">Volver a jugar</button>
-        <br><br>
-        <a href="juego.html" class="btn">Ver más juegos</a>
-    `;
-}
-
-
-// =============================
-// MODO CELULAR (CLICK)
-// =============================
-
-document.addEventListener("click", function(e){
-
-    const elemento = e.target.closest(".elemento-draggable");
-    const zona = e.target.closest(".zona");
-
-    // -------------------------
-    // SELECCIONAR ELEMENTO
-    // -------------------------
-
-    if(elemento && !elemento.classList.contains("elemento-correcto")){
-
-        document.querySelectorAll(".elemento-draggable").forEach(el=>{
-            el.style.border = "none";
-        });
-
-        elementoSeleccionado = elemento;
-        elemento.style.border = "3px solid yellow";
-        return;
+  while (opciones.length < 4) {
+    let random = Math.floor(Math.random() * max) + 1;
+    if (!opciones.includes(random)) {
+      opciones.push(random);
     }
+  }
 
-
-    // -------------------------
-    // SELECCIONAR ZONA
-    // -------------------------
-
-    if(zona && elementoSeleccionado){
-
-        const tipoElemento = elementoSeleccionado.dataset.tipo;
-        const tipoZona = zona.dataset.tipo;
-
-        if(tipoElemento === tipoZona){
-
-            elementoSeleccionado.classList.add("elemento-correcto");
-            elementoSeleccionado.draggable = false;
-
-            zona.appendChild(elementoSeleccionado);
-
-            elementoSeleccionado.style.border = "none";
-
-            aciertos++;
-
-            if(aciertos === elementosClasificacion.length){
-                mostrarResultadoClasificacion();
-            }
-
-        }else{
-
-            zona.classList.add("incorrecta-zona");
-
-            setTimeout(()=>{
-                zona.classList.remove("incorrecta-zona");
-            },600);
-        }
-
-        // SIEMPRE deseleccionar
-        elementoSeleccionado.style.border = "none";
-        elementoSeleccionado = null;
-    }
-
-});
-
-
-// =============================
-// LIMPIAR ZONAS
-// =============================
-
-function limpiarZonas(){
-
-    const zonas = document.querySelectorAll(".zona");
-
-    zonas.forEach(zona => {
-
-        const elementos = zona.querySelectorAll(".elemento-draggable");
-
-        elementos.forEach(el => el.remove());
-
-        zona.classList.remove("correcta-zona");
-        zona.classList.remove("incorrecta-zona");
-    });
-
+  return opciones.sort(() => Math.random() - 0.5);
 }
 
 
 // =============================
-// REINICIAR
+// GENERAR OPCIONES TIPO
 // =============================
 
-function reiniciarClasificacion() {
+function generarOpcionesTipo(correcta) {
 
-    elementoSeleccionado = null;
+  const tipos = ["Metal", "No metal", "Metaloide", "Gas noble"];
+  let opciones = [correcta];
 
-    limpiarZonas();
+  while (opciones.length < 4) {
+    let random = tipos[Math.floor(Math.random() * tipos.length)];
+    if (!opciones.includes(random)) {
+      opciones.push(random);
+    }
+  }
 
-    document.getElementById("elementosArrastrables").innerHTML = "";
-    document.getElementById("resultadoClasificacion").innerHTML = "";
+  return opciones.sort(() => Math.random() - 0.5);
+}
 
-    generarElementosClasificacion();
+
+// =============================
+// MOSTRAR PREGUNTA
+// =============================
+
+function mostrarPregunta() {
+
+  if (preguntaActual >= 10) {
+    mostrarResultado();
+    return;
+  }
+
+  document.getElementById("pantallaInicio").classList.add("oculto");
+  document.getElementById("pantallaJuego").classList.remove("oculto");
+
+  const progreso = (preguntaActual / 10) * 100;
+  document.getElementById("barraProgreso").style.width = progreso + "%";
+
+  document.getElementById("contador").innerText =
+    `Pregunta ${preguntaActual + 1} de 10`;
+
+  const elemento = preguntasSeleccionadas[preguntaActual];
+  const pregunta = generarPregunta(elemento);
+
+  document.getElementById("pregunta").innerText = pregunta.texto;
+
+  const contenedor = document.getElementById("opciones");
+  contenedor.innerHTML = "";
+
+  pregunta.opciones.forEach(opcion => {
+
+    let boton = document.createElement("button");
+    boton.innerText = opcion;
+
+    boton.onclick = function() {
+      verificarRespuesta(boton, opcion, pregunta.correcta);
+    };
+
+    contenedor.appendChild(boton);
+  });
+}
+
+
+// =============================
+// VERIFICAR RESPUESTA
+// =============================
+
+function verificarRespuesta(boton, seleccion, correcta) {
+
+  const botones = document.querySelectorAll("#opciones button");
+
+  botones.forEach(b => b.disabled = true);
+
+  if (String(seleccion) === String(correcta)) {
+    boton.classList.add("correcta");
+    puntaje++;
+  } else {
+    boton.classList.add("incorrecta");
+
+    botones.forEach(b => {
+      if (String(b.innerText) === String(correcta)) {
+        b.classList.add("correcta");
+      }
+    });
+  }
+
+  setTimeout(() => {
+    preguntaActual++;
+    mostrarPregunta();
+  }, 1000);
+}
+
+
+// =============================
+// MOSTRAR RESULTADO FINAL
+// =============================
+
+function mostrarResultado() {
+
+  document.getElementById("barraProgreso").style.width = "100%";
+
+  let porcentaje = (puntaje / 10) * 100;
+  let mensaje = "";
+
+  if (porcentaje >= 90) mensaje = "Excelente 🏆";
+  else if (porcentaje >= 70) mensaje = "Muy bien 👏";
+  else if (porcentaje >= 50) mensaje = "Puedes mejorar 👍";
+  else mensaje = "Repasa la teoría 📚";
+
+  document.getElementById("pregunta").innerText = "Juego Terminado";
+
+  document.getElementById("opciones").innerHTML = `
+    <h3>Obtuviste ${puntaje}/10</h3>
+    <p>${porcentaje}%</p>
+    <p>${mensaje}</p>
+    <button class="btn-principal" onclick="iniciarJuego()">Volver a jugar</button><br>
+    <a href="juego.html" class="btn">Ver más juegos</a>
+  `;
+
+
+
+
+
+}
+
+  function mostrarTrivia(){
+
+document.getElementById("contenedorTrivia").classList.remove("oculto");
+document.getElementById("contenedorMemorama").classList.add("oculto");
+document.getElementById("contenedorClasificacion").classList.add("oculto");
+
+}
+
+function mostrarMemorama(){
+
+document.getElementById("contenedorTrivia").classList.add("oculto");
+document.getElementById("contenedorMemorama").classList.remove("oculto");
+document.getElementById("contenedorClasificacion").classList.add("oculto");
+
+}
+
+function mostrarClasificacion(){
+
+document.getElementById("contenedorTrivia").classList.add("oculto");
+document.getElementById("contenedorMemorama").classList.add("oculto");
+document.getElementById("contenedorClasificacion").classList.remove("oculto");
+
 }
