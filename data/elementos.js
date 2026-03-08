@@ -1,11 +1,4 @@
 const elementos = [
-
-
-
-
-
-
-
 /*Omar*/
 
 {
@@ -15,7 +8,7 @@ const elementos = [
         grupo: 1,
         periodo: 1,
         masa: 1.008,
-        tipo: "halogenos"
+        tipo: "no-metal"
     },
     {
         numero: 3,
@@ -289,6 +282,10 @@ const elementos = [
   masa: 272,
   tipo: "metal-transicion"
 },
+
+
+
+
 
 
 /*Dario*/
@@ -628,47 +625,258 @@ const elementos = [
 
 
 
+/*maicol*/
+
+{
+    numero: 2,
+    simbolo: "He",
+    nombre: "Helio",
+    grupo: 18,
+    periodo: 1,
+    masa: 4.0026,
+    tipo: "gas-noble"
+},
+{
+    numero: 5,
+    simbolo: "B",
+    nombre: "Boro",
+    grupo: 13,
+    periodo: 2,
+    masa: 10.81,
+    tipo: "metaloide"
+},
+{
+    numero: 6,
+    simbolo: "C",
+    nombre: "Carbono",
+    grupo: 14,
+    periodo: 2,
+    masa: 12.011,
+    tipo: "no-metal"
+},
+{
+    numero: 7,
+    simbolo: "N",
+    nombre: "Nitrógeno",
+    grupo: 15,
+    periodo: 2,
+    masa: 14.007,
+    tipo: "no-metal"
+},
+{
+    numero: 8,
+    simbolo: "O",
+    nombre: "Oxígeno",
+    grupo: 16,
+    periodo: 2,
+    masa: 15.999,
+    tipo: "no-metal"
+},
+{
+    numero: 9,
+    simbolo: "F",
+    nombre: "Flúor",
+    grupo: 17,
+    periodo: 2,
+    masa: 18.998,
+    tipo: "halogenos"
+},
+{
+    numero: 10,
+    simbolo: "Ne",
+    nombre: "Neón",
+    grupo: 18,
+    periodo: 2,
+    masa: 20.180,
+    tipo: "gas-noble"
+},
+{
+    numero: 13,
+    simbolo: "Al",
+    nombre: "Aluminio",
+    grupo: 13,
+    periodo: 3,
+    masa: 26.982,
+    tipo: "otros-metales"
+},
+{
+    numero: 14,
+    simbolo: "Si",
+    nombre: "Silicio",
+    grupo: 14,
+    periodo: 3,
+    masa: 28.085,
+    tipo: "metaloide"
+},
+{
+    numero: 15,
+    simbolo: "P",
+    nombre: "Fósforo",
+    grupo: 15,
+    periodo: 3,
+    masa: 30.974,
+    tipo: "no-metal"
+},
+{
+    numero: 16,
+    simbolo: "S",
+    nombre: "Azufre",
+    grupo: 16,
+    periodo: 3,
+    masa: 32.06,
+    tipo: "no-metal"
+},
+{
+    numero: 17,
+    simbolo: "Cl",
+    nombre: "Cloro",
+    grupo: 17,
+    periodo: 3,
+    masa: 35.45,
+    tipo: "halogenos"
+},
+{
+    numero: 18,
+    simbolo: "Ar",
+    nombre: "Argón",
+    grupo: 18,
+    periodo: 3,
+    masa: 39.948,
+    tipo: "gas-noble"
+},
+{
+    numero: 32,
+    simbolo: "Ge",
+    nombre: "Germanio",
+    grupo: 14,
+    periodo: 4,
+    masa: 72.630,
+    tipo: "metaloide"
+},
+{
+    numero: 33,
+    simbolo: "As",
+    nombre: "Arsénico",
+    grupo: 15,
+    periodo: 4,
+    masa: 74.922,
+    tipo: "metaloide"
+},
+{
+    numero: 34,
+    simbolo: "Se",
+    nombre: "Selenio",
+    grupo: 16,
+    periodo: 4,
+    masa: 78.971,
+    tipo: "no-metal"
+},
+{
+    numero: 35,
+    simbolo: "Br",
+    nombre: "Bromo",
+    grupo: 17,
+    periodo: 4,
+    masa: 79.904,
+    tipo: "halogenos"
+},
+{
+    numero: 36,
+    simbolo: "Kr",
+    nombre: "Kriptón",
+    grupo: 18,
+    periodo: 4,
+    masa: 83.798,
+    tipo: "gas-noble"
+},
+{
+    numero: 52,
+    simbolo: "Te",
+    nombre: "Telurio",
+    grupo: 16,
+    periodo: 5,
+    masa: 127.60,
+    tipo: "metaloide"
+},
+{
+    numero: 53,
+    simbolo: "I",
+    nombre: "Yodo",
+    grupo: 17,
+    periodo: 5,
+    masa: 126.90,
+    tipo: "halogenos"
+},
+{
+    numero: 54,
+    simbolo: "Xe",
+    nombre: "Xenón",
+    grupo: 18,
+    periodo: 5,
+    masa: 131.29,
+    tipo: "gas-noble"
+},
+{
+    numero: 84,
+    simbolo: "Po",
+    nombre: "Polonio",
+    grupo: 16,
+    periodo: 6,
+    masa: 209,
+    tipo: "metaloide"
+},
+{
+    numero: 85,
+    simbolo: "At",
+    nombre: "Astato",
+    grupo: 17,
+    periodo: 6,
+    masa: 210,
+    tipo: "halogenos"
+},
+{
+    numero: 86,
+    simbolo: "Rn",
+    nombre: "Radón",
+    grupo: 18,
+    periodo: 6,
+    masa: 222,
+    tipo: "gas-noble"
+},
+{
+    numero: 116,
+    simbolo: "Lv",
+    nombre: "Livermorio",
+    grupo: 16,
+    periodo: 7,
+    masa: 293,
+    tipo: "otros-metales"
+},
+{
+    numero: 117,
+    simbolo: "Ts",
+    nombre: "Teneso",
+    grupo: 17,
+    periodo: 7,
+    masa: 294,
+    tipo: "halogenos"
+},
+{
+    numero: 118,
+    simbolo: "Og",
+    nombre: "Oganesón",
+    grupo: 18,
+    periodo: 7,
+    masa: 294,
+    tipo: "gas-noble"
+},
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*Yandel*/
 
     {
         numero: 57,
@@ -676,6 +884,7 @@ const elementos = [
         nombre: "Lantano",
         grupo: 4,
         periodo: 6,
+        masa: 138.91,
         tipo: "lantanidos"
     },
     {
@@ -684,6 +893,7 @@ const elementos = [
         nombre: "Cerio",
         grupo: 5,
         periodo: 6,
+        masa: 140.12,
         tipo: "lantanidos"
     },
     {
@@ -692,6 +902,7 @@ const elementos = [
         nombre: "Praseodimio",
         grupo: 6,
         periodo: 6,
+        masa: 140.91,
         tipo: "lantanidos"
     },
         {
@@ -700,6 +911,7 @@ const elementos = [
         nombre: "Neodimio",
         grupo: 7,
         periodo: 6,
+           masa: 144.24,
         tipo: "lantanidos"
     },
     {
@@ -708,6 +920,7 @@ const elementos = [
         nombre: "Prometio",
         grupo: 8,
         periodo: 6,
+        masa: 145,
         tipo: "lantanidos"
     },
     {
@@ -716,6 +929,7 @@ const elementos = [
         nombre: "Samario",
         grupo: 9,
         periodo: 6,
+        masa: 150.36,
         tipo: "lantanidos"
     },
         {
@@ -724,6 +938,7 @@ const elementos = [
         nombre: "Europio",
         grupo: 10,
         periodo: 6,
+        masa: 151.96,
         tipo: "lantanidos"
     },
     {
@@ -732,6 +947,7 @@ const elementos = [
         nombre: "Gadolinio",
         grupo: 11,
         periodo: 6,
+        masa: 157.25,
         tipo: "lantanidos"
     },
     {
@@ -740,6 +956,7 @@ const elementos = [
         nombre: "Terbio",
         grupo: 12,
         periodo: 6,
+        masa: 158.93,
         tipo: "lantanidos"
     },
     {
@@ -748,6 +965,7 @@ const elementos = [
         nombre: "Disprosio",
         grupo: 13,
         periodo: 6,
+        masa: 162.50,
         tipo: "lantanidos"
     },
     {
@@ -756,14 +974,16 @@ const elementos = [
         nombre: "Holmio",
         grupo: 14,
         periodo: 6,
+        masa: 164.93,
         tipo: "lantanidos"
     },
     {
         numero: 68,
         simbolo: "Er",
-        nombre: "Ersio",
+        nombre: "Erbio",
         grupo: 15,
         periodo: 6,
+        masa: 167.26,
         tipo: "lantanidos"
     },
         {
@@ -772,6 +992,7 @@ const elementos = [
         nombre: "Tulio",
         grupo: 16,
         periodo: 6,
+        masa: 168.93,
         tipo: "lantanidos"
     },
     {
@@ -780,6 +1001,7 @@ const elementos = [
         nombre: "Iterbio",
         grupo: 17,
         periodo: 6,
+        masa: 173.05,
         tipo: "lantanidos"
     },
     {
@@ -788,6 +1010,7 @@ const elementos = [
         nombre: "Lutecio",
         grupo: 18,
         periodo: 6,
+        masa: 174.97,
         tipo: "lantanidos"
     },
     {
