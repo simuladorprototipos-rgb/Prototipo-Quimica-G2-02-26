@@ -1019,6 +1019,7 @@ const elementos = [
         nombre: "Actinio",
         grupo: 4,
         periodo: 7,
+        masa: 227,
         tipo: "actinidos"
     },
     {
@@ -1027,6 +1028,7 @@ const elementos = [
         nombre: "Torio",
         grupo: 5,
         periodo: 7,
+        masa: 234.04,
         tipo: "actinidos"
     },
     {
@@ -1035,6 +1037,7 @@ const elementos = [
         nombre: "Protactinio",
         grupo: 6,
         periodo: 7,
+        masa: 231.036,
         tipo: "actinidos"
     },
         {
@@ -1043,6 +1046,7 @@ const elementos = [
         nombre: "Uranio",
         grupo: 7,
         periodo: 7,
+        masa: 238.03,
         tipo: "actinidos"
     },
     {
@@ -1051,6 +1055,7 @@ const elementos = [
         nombre: "Neptunio",
         grupo: 8,
         periodo: 7,
+        masa: 237,
         tipo: "actinidos"
     },
     {
@@ -1059,6 +1064,7 @@ const elementos = [
         nombre: "Plutonio",
         grupo: 9,
         periodo: 7,
+        masa: 244,
         tipo: "actinidos"
     },
         {
@@ -1067,6 +1073,7 @@ const elementos = [
         nombre: "Americio",
         grupo: 10,
         periodo: 7,
+        masa: 243,
         tipo: "actinidos"
     },
     {
@@ -1075,6 +1082,7 @@ const elementos = [
         nombre: "Curio",
         grupo: 11,
         periodo: 7,
+        masa: 247,
         tipo: "actinidos"
     },
     {
@@ -1083,6 +1091,7 @@ const elementos = [
         nombre: "Berquelio",
         grupo: 12,
         periodo: 7,
+        masa: 247,
         tipo: "actinidos"
     },
     {
@@ -1091,6 +1100,7 @@ const elementos = [
         nombre: "Californio",
         grupo: 13,
         periodo: 7,
+        masa: 251,
         tipo: "actinidos"
     },
     {
@@ -1099,6 +1109,7 @@ const elementos = [
         nombre: "Einstenio",
         grupo: 14,
         periodo: 7,
+        masa: 252,
         tipo: "actinidos"
     },
     {
@@ -1107,6 +1118,7 @@ const elementos = [
         nombre: "Fermio",
         grupo: 15,
         periodo: 7,
+        masa: 257,
         tipo: "actinidos"
     },
     {
@@ -1115,6 +1127,7 @@ const elementos = [
         nombre: "Mendelevio",
         grupo: 16,
         periodo: 7,
+        masa: 258,
         tipo: "actinidos"
     },
     {
@@ -1123,6 +1136,7 @@ const elementos = [
         nombre: "Nobelio",
         grupo: 17,
         periodo: 7,
+        masa: 259,
         tipo: "actinidos"
     },
     {
@@ -1131,6 +1145,7 @@ const elementos = [
         nombre: "Laurencio",
         grupo: 18,
         periodo: 7,
+        masa: 266,
         tipo: "actinidos"
     }
 
