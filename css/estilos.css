@@ -95,8 +95,8 @@ footer {
 /* COLORES POR TIPO */
 /*Parar teoria*/
 .metal{ background: green; color: white;}
-.no-metal { background: #4caf50; color: white; }
-.metaloide { background: #dc733a; color: rgb(255, 255, 255); }
+.no-metal { background: #ed6928; color: rgb(0, 0, 0); }
+.metaloide { background: #af2828; color: white }
 
 
 
@@ -104,16 +104,16 @@ footer {
 
 /*Para la tabla*/
 
-.metal-alcalino { background: #28b457; color: white; }
-.metal-alcalinoterreo { background: #097727; color: white; }
+.metal-alcalino { background: #110747; color: white; }
+.metal-alcalinoterreo { background: #c18e37; color: black; }
 /*semimetales { background: #13b83f; color: white; }*/
-.otros-metales{ background: #754399; color: white;}
-.metal-transicion{ background: #454399; color: white;}
+.otros-metales{ background: #4d2c65; color: white;}
+.metal-transicion{ background: #4946e4; color: white;}
 .lantanidos{ background: #4ccdbe; color: black;}
-.actinidos{ background: #1976d2; color: white;}
+.actinidos{ background: #2e6b38cd; color: white;}
 /*metaloides { background: #13b83f; color: white; }*/
-.halogenos{ background: rgb(181, 46, 143); color: rgb(255, 255, 255);}
-.gas-noble { background: #c66d9f; color: white; }
+.halogenos{ background: rgb(42, 120, 54); color: rgb(255, 255, 255);}
+.gas-noble { background: #d22487; color: white; }
 
 
 /* MODAL */
@@ -566,6 +566,11 @@ footer {
 
     text-align:center;
     font-size:13px;
+}
+
+.img1{
+    width: 250px;
+    height: 100px;
 }
   
 }
